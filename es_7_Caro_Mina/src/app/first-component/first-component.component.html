@@ -7,86 +7,119 @@
   <img style="margin-left: 370px;"  src="../../assets/pokemon-nero-removebg-preview.png" alt="">
   <p style="font-family: FREEBOSS; color: black;">Unima è una regione del mondo dei Pokémon. È l'ambientazione dei giochi di quinta generazione, Nero e Bianco e Nero 2 e Bianco 2. A differenza delle precedenti, questa è molto lontana dalle altre quattro regioni e i Pokémon che vi abitano sono diversi da quelli di Kanto, Johto, Hoenn e Sinnoh. Nel suo editoriale, Junichi Masuda ha suggerito che la geografia e la società di Unima sono ispirate all'area metropolitana e all'intero stato di New York, che possiede un mix di aree rurali e aree urbane, insieme a fabbriche e complessi industriali.</p>
   <br><br>
-<div class="container">
-    <div class="row">
-  <div *ngFor="let element of pokemon, index as i" class="col-md-4">
 
-    <div class="card mb-4">
-        <img class="card-img-top" src="img_avatar1.png" alt="Card image">
-        <div class="card-body">
-          <h4 class="card-title">John Doe</h4>
-          <p class="card-text">Some example text.</p>
-          <a href="#" class="btn btn-primary">See Profile</a>
-        </div>
-      </div>
-    </div>
     
 
-      <div class="container" style="width: 400px;">
-    
-        <div class="card mb-5">
-            <img class="card-img-top" src="img_avatar1.png" alt="Card image">
-            <div class="card-body">
-              <h4 class="card-title">John Doe</h4>
-              <p class="card-text">Some example text.</p>
-              <a href="#" class="btn btn-primary" (click)="bottone(element)">See Profile</a>
-            </div>
-          </div>
+      
 
-          <div class="container" style="width: 400px;">
           
-        
-            <div class="card mb-5">
-                <img class="card-img-top" src="img_avatar1.png" alt="Card image">
-                <div class="card-body">
-                  <h4 class="card-title">John Doe</h4>
-                  <p class="card-text">Some example text.</p>
-                  <a href="#" class="btn btn-primary">See Profile</a>
-                </div>
-              </div>
 
-              <div class="container"style="400px">
-                <div class="card mb-5">
-                    <img class="card-img-top" src="img_avatar1.png" alt="Card image">
-                    <div class="card-body">
-                      <h4 class="card-title">John Doe</h4>
-                      <p class="card-text">Some example text.</p>
-                      <a href="#" class="btn btn-primary">See Profile</a>
-                    </div>
-                  </div>
-
-                  <div class="container" style="width: 400px;">
-                    
-                
-                    <div class="card mb-5">
-                        <img class="card-img-top" src="img_avatar1.png" alt="Card image">
-                        <div class="card-body">
-                          <h4 class="card-title">John Doe</h4>
-                          <p class="card-text">Some example text.</p>
-                          <a href="#" class="btn btn-primary">See Profile</a>
-                        </div>
-                      </div>
-
-                      <div class="container" style="width: 400px;">
-                        
-                        <div class="card mb-5">
-                            <img class="card-img-top" src="img_avatar1.png" alt="Card image">
-                            <div class="card-body">
-                              <h4 class="card-title">John Doe</h4>
-                              <p class="card-text">Some example text.</p>
-                              <a href="#" class="btn btn-primary">See Profile</a>
-                            </div>
-                          </div>
-                          <div class="container" style="width: 400px;">
-                        
-                            <div class="card mb-5">
-                                <img class="card-img-top" src="img_avatar1.png" alt="Card image">
-                                <div class="card-body">
-                                  <h4 class="card-title">John Doe</h4>
-                                  <p class="card-text">Some example text.</p>
-                                  <a href="#" class="btn btn-primary">See Profile</a>
-                                </div>
                               
-                                            
-
+                                <div *ngIf="!(pokemon[0].starter || pokemon[1].starter || pokemon[2].starter || pokemon[3].starter || pokemon[4].starter || pokemon[5].starter); then thenBlock1; else elseBlock1"></div>
+                                <ng-template #thenBlock1>
+                                  <div class="container">
+                                    <div class="row">
+                                  <div *ngFor="let element of pokemon, index as i" class="col-md-4">
+                                
+                                    <div class="card mb-4">
+                                        <img class="card-img-top" src="img_avatar1.png" alt="Card image">
+                                        <div class="card-body">
+                                          <h4 class="card-title">John Doe</h4>
+                                          <p class="card-text">Some example text.</p>
+                                          <a href="#" class="btn btn-primary" (click)="bottone(element)">See Profile</a>
+                                        </div>
+                                      </div>
+                                    </div>
+                                </ng-template>
+                                
+                                <ng-template #elseBlock1>
+                                  <div *ngIf="pokemon[0].starter; then thenBlock2; else elseBlock2"></div>
+                                
+                                  <ng-template #thenBlock2>
+                                    <div class="container" style="width: 400px;">
+    
+                                      <div class="card mb-5">
+                                          <img class="card-img-top" src="img_avatar1.png" alt="Card image">
+                                          <div class="card-body">
+                                            <h4 class="card-title">John Doe</h4>
+                                            <p class="card-text">Some example text.</p>
+                                            <a href="#" class="btn btn-primary" >See Profile</a>
+                                          </div>
+                                        </div>
+                                  </ng-template>
+                                
+                                  <ng-template #elseBlock2>
+                                    <div *ngIf="pokemon[1].starter; then thenBlock3; else elseBlock3"></div>
+                                
+                                    <ng-template #thenBlock3>
+                                      <div class="container" style="width: 400px;">
+                                        <div class="card mb-5">
+                                            <img class="card-img-top" src="img_avatar1.png" alt="Card image">
+                                            <div class="card-body">
+                                              <h4 class="card-title">John Doe</h4>
+                                              <p class="card-text">Some example text.</p>
+                                              <a href="#" class="btn btn-primary">See Profile</a>
+                                            </div>
+                                          </div>
+                                    </ng-template>
+                                
+                                    <ng-template #elseBlock3>
+                                      <div *ngIf="pokemon[2].starter; then thenBlock4; else elseBlock4 "></div>
+                                
+                                    <ng-template #thenBlock4>
+                                      <div class="container" style="width: 400px;">
+                                        <div class="card mb-5">
+                                            <img class="card-img-top" src="img_avatar1.png" alt="Card image">
+                                            <div class="card-body">
+                                              <h4 class="card-title">John Doe</h4>
+                                              <p class="card-text">Some example text.</p>
+                                              <a href="#" class="btn btn-primary">See Profile</a>
+                                            </div>
+                                          </div>
+                                    </ng-template>
+                                    <ng-template #elseBlock3>
+                                      <div *ngIf="pokemon[3].starter; then thenBlock4; else elseBlock5 "></div>
+                                
+                                    <ng-template #thenBlock4>
+                                      <div class="container" style="width: 400px;">
+                                        <div class="card mb-5">
+                                            <img class="card-img-top" src="img_avatar1.png" alt="Card image">
+                                            <div class="card-body">
+                                              <h4 class="card-title">John Doe</h4>
+                                              <p class="card-text">Some example text.</p>
+                                              <a href="#" class="btn btn-primary">See Profile</a>
+                                            </div>
+                                          </div>
+                                    </ng-template>
+                                    <ng-template #elseBlock3>
+                                      <div *ngIf="pokemon[4].starter; then thenBlock4; else elseBlock6 "></div>
+                                
+                                    <ng-template #thenBlock4>
+                                      <div class="container" style="width: 400px;">
+                                        <div class="card mb-5">
+                                            <img class="card-img-top" src="img_avatar1.png" alt="Card image">
+                                            <div class="card-body">
+                                              <h4 class="card-title">John Doe</h4>
+                                              <p class="card-text">Some example text.</p>
+                                              <a href="#" class="btn btn-primary">See Profile</a>
+                                            </div>
+                                          </div>
+                                    </ng-template>
+                                    <ng-template #elseBlock3>
+                                      <div *ngIf="pokemon[5].starter; then thenBlock4; "></div>
+                                
+                                    <ng-template #thenBlock4>
+                                      <div class="container" style="width: 400px;">
+                                        <div class="card mb-5">
+                                            <img class="card-img-top" src="img_avatar1.png" alt="Card image">
+                                            <div class="card-body">
+                                              <h4 class="card-title">John Doe</h4>
+                                              <p class="card-text">Some example text.</p>
+                                              <a href="#" class="btn btn-primary">See Profile</a>
+                                            </div>
+                                          </div>
+                                    </ng-template>
+                                    </ng-template>
+                                  </ng-template>
+                                </ng-template> 
       
