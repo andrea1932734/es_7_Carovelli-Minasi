@@ -1,0 +1,28 @@
+
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
+  <div class="sfondo">
+  <br>
+  <img style="margin-left: 370px;"  src="../../assets/pokemon-nero-removebg-preview.png" alt="">
+  <p style="font-family: FREEBOSS; color: black;">Unima è una regione del mondo dei Pokémon. È l'ambientazione dei giochi di quinta generazione, Nero e Bianco e Nero 2 e Bianco 2. A differenza delle precedenti, questa è molto lontana dalle altre quattro regioni e i Pokémon che vi abitano sono diversi da quelli di Kanto, Johto, Hoenn e Sinnoh. Nel suo editoriale, Junichi Masuda ha suggerito che la geografia e la società di Unima sono ispirate all'area metropolitana e all'intero stato di New York, che possiede un mix di aree rurali e aree urbane, insieme a fabbriche e complessi industriali.</p>
+  <br><br>
+
+  <div *ngFor="let element of pokemon, index as i">
+
+    <div class="card w-75">
+  <div class="card-body">
+    <h5 class="card-title">{{element.nome}}</h5>
+    <p class="card-text">With supporting text below as a natural lead-in to additional content.</p>
+    <a href="#" class="btn btn-primary">Button</a>
+  </div>
+</div>
+   
+   </div>
+
+ 
+
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+
