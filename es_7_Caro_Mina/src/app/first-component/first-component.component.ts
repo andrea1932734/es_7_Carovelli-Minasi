@@ -41,4 +41,13 @@ bottone(pokemon:{nome: string}){
   }
 }
 
+indietro(){
+  this.pokemon[0].controllo = false
+  this.pokemon[1].controllo = false
+  this.pokemon[2].controllo = false
+  this.pokemon[3].controllo = false
+  this.pokemon[4].controllo = false
+  this.pokemon[5].controllo = false
+}
+
 }
