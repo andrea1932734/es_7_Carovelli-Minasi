@@ -6,17 +6,11 @@
   <br>
   <img style="margin-left: 370px;"  src="../../assets/pokemon-nero-removebg-preview.png" alt="">
   <p style="font-family: FREEBOSS; color: black;">Unima è una regione del mondo dei Pokémon. È l'ambientazione dei giochi di quinta generazione, Nero e Bianco e Nero 2 e Bianco 2. A differenza delle precedenti, questa è molto lontana dalle altre quattro regioni e i Pokémon che vi abitano sono diversi da quelli di Kanto, Johto, Hoenn e Sinnoh. Nel suo editoriale, Junichi Masuda ha suggerito che la geografia e la società di Unima sono ispirate all'area metropolitana e all'intero stato di New York, che possiede un mix di aree rurali e aree urbane, insieme a fabbriche e complessi industriali.</p>
+  <img  style="margin-left: 370px;"   src="../../assets/perla-removebg-preview.png" alt="">
+  <p style="font-family: FREEBOSS; color: purple;">Pokémon Diamante Lucente e Pokémon Perla Splendente sono ambientati nella regione di Sinnoh. Con la sua natura rigogliosa e l'imponente Monte Corona a dominare il paesaggio, la regione di Sinnoh è una terra ricca di leggende tramandate nel tempo.</p>
   <br><br>
   
-
-    
-
-
-
-
-
-
-
+  
 
 
   <div *ngIf="!(pokemon[0].controllo || pokemon[1].controllo || pokemon[2].controllo || pokemon[3].controllo || pokemon[4].controllo || pokemon[5].controllo); then thenBlock1 else elseBlock"></div>
@@ -26,10 +20,10 @@
       <div class="row">
         <div *ngFor="let element of pokemon; let i = index" class="col-md-4">
           <div class="card mb-4">
-            <img class="card-img-top" src="img_avatar1.png" alt="Card image">
+            <img class="card-img-top" src="../../assets/carta.jpeg" alt="Card image">
             <div class="card-body">
-              <h4 class="card-title">John Doe</h4>
-              <p class="card-text">Some example text.</p>
+              <h4 class="card-title"></h4>
+              <p class="card-text"></p>
               <a href="#" class="btn btn-primary" (click)="bottone(element)">See Profile</a>
             </div>
           </div>
@@ -44,10 +38,12 @@
     <ng-template #thenBlock2>
       <div class="container" style="width: 400px;">
       <div class="card mb-5">
-        <img class="card-img-top" src="img_avatar1.png" alt="Card image">
+        <img class="card-img-top" src="../../assets/tepig.jpg" alt="Card image">
         <div class="card-body">
-          <h4 class="card-title">John Doe</h4>
-          <p class="card-text">Some example text.</p>
+          <h4 style="font-family: FREEBOSS; color: red;"  class="card-title">TEPIG</h4>
+          <p  style="font-family: FREEBOSS; color: red;"  class="card-text">POKEMON BIANCO E NERO(quinta generazione)</p>
+          <P  style="font-family: FREEBOSS; color: red;"  class="car-text">descrizione: Tepig è un Pokémon di tipo Fuoco introdotto in quinta generazione.Tepig si evolve in Pignite a partire dal livello 17 e quindi in Emboar a partire dal livello 36.</P>
+          <p  style="font-family: FREEBOSS; color: red;"  class="card-text">habitat: I Tepig non si trovano facilmente, tuttavia può darsi che vivano nelle zone vicine al fuoco.</p>
           <button type="button" class="btn"  (click)="indietro()">Torna alla home</button>
         </div>
       </div>    
@@ -60,26 +56,30 @@
       <ng-template #thenBlock3>
         <div class="container" style="width: 400px;">
         <div class="card mb-5">
-          <img class="card-img-top" src="img_avatar1.png" alt="Card image">
+          <img class="card-img-top" src="../../assets/oshawott.jpg" alt="Card image">
           <div class="card-body">
-            <h4 class="card-title">John Doe</h4>
-            <p class="card-text">Some example text.</p>
+            <h4 style="font-family: FREEBOSS; color: lightblue;"   class="card-title">OSHAWOTT</h4>
+            <p  style="font-family: FREEBOSS; color: lightblue;"  class="card-text">POKEMON BIANCO E NERO(quinta generazione)</p>
+            <p   style="font-family: FREEBOSS; color: lightblue;">descrizione: Oshawott è un Pokémon di tipo Acqua introdotto in quinta generazione.Oshawott si evolve in Dewott a partire dal livello 17 e quindi in Samurott a partire dal livello 36.</p>
+            <p  style="font-family: FREEBOSS; color: lightblue;"  class="card-text">habitat:I pochi esemplari di Oshawott selvatici vivono prevalentemente in acqua, ma si trovano a loro agio anche sulla terraferma.</p>
             <button type="button" class="btn"  (click)="indietro()">Torna alla home</button>
           </div>
         </div>  
       </div>       
       </ng-template>
-  
+
       <ng-template #elseBlock3>
         <div *ngIf="pokemon[2].controllo; then thenBlock4 else elseBlock4"></div>
   
         <ng-template #thenBlock4>
           <div class="container" style="width: 400px;">
           <div class="card mb-5">
-            <img class="card-img-top" src="img_avatar1.png" alt="Card image">
+            <img class="card-img-top" src="../../assets/servy.jpg" alt="Card image">
             <div class="card-body">
-              <h4 class="card-title">John Doe</h4>
-              <p class="card-text">Some example text.</p>
+              <h4 style="font-family: FREEBOSS;color: lightgreen;"    class="card-title">SNIVY</h4>
+              <p style="font-family: FREEBOSS; color: lightgreen;"  class="card-text">POKEMON BIANCO E NERO(quinta generazione)</p>
+              <P style="font-family: FREEBOSS; color: lightgreen;"> descrizione: Snivy è un Pokémon di tipo Erba introdotto in quinta generazione.Si evolve in Servine a partire dal livello 17 e quindi in Serperior a partire dal livello 36.</P>
+              <P style="font-family: FREEBOSS; color: lightgreen;"> habitat: Gli Snivy non si trovano facilmente. I pochi esemplari vivono nelle foreste e nei luoghi erbosi.</P>
               <button type="button" class="btn"  (click)="indietro()">Torna alla home</button>
             </div>
           </div>    
@@ -92,10 +92,12 @@
           <ng-template #thenBlock5>
             <div class="container" style="width: 400px;">
             <div class="card mb-5">
-              <img class="card-img-top" src="img_avatar1.png" alt="Card image">
+              <img class="card-img-top" src="../../assets/chimchar.jpeg" alt="Card image">
               <div class="card-body">
-                <h4 class="card-title">John Doe</h4>
-                <p class="card-text">Some example text.</p>
+                <h4 style="font-family: FREEBOSS; color: red;"   class="card-title">CHIMCHAR</h4>
+                <p  style="font-family: FREEBOSS; color: red;"  class="card-text">POKEMON PERLA(quarta generazione)</p>
+                <p  style="font-family: FREEBOSS; color: red;"  class="card-text">descrizione: Chimchar è un Pokémon di tipo Fuoco introdotto in quarta generazione.Si evolve in Monferno a partire dal livello 14 e quindi in Infernape a partire dal livello 36.</p>
+                <p  style="font-family: FREEBOSS; color: red;"  class="card-text">habitat: Chimachar è un Pokémon molto raro più presente in cattività che in natura dove nidifica su rupi e montagne rocciose.</p>
                 <button type="button" class="btn"  (click)="indietro()">Torna alla home</button>
               </div>
             </div>     
@@ -108,10 +110,12 @@
             <ng-template #thenBlock6>
               <div class="container" style="width: 400px;">
               <div class="card mb-5">
-                <img class="card-img-top" src="img_avatar1.png" alt="Card image">
+                <img class="card-img-top" src="../../assets/piplup.jpeg" alt="Card image">
                 <div class="card-body">
-                  <h4 class="card-title">John Doe</h4>
-                  <p class="card-text">Some example text.</p>
+                  <h4 style="font-family: FREEBOSS; color: lightblue;" class="card-title">piplup</h4>
+                  <p  style="font-family: FREEBOSS; color: lightblue;"  class="card-text">POKEMON PERLA(quarta generazione)</p>
+                  <p  style="font-family: FREEBOSS; color: lightblue;"  class="card-text">descrizione: Piplup è un Pokémon di tipo Acqua introdotto in quarta generazione.Si evolve in Prinplup a partire dal livello 16 e quindi in Empoleon a partire dal livello 36.</p>
+                  <p  style="font-family: FREEBOSS; color: lightblue;"  class="card-text">habitat: I Piplup vivono sulle rive dei mari nei climi più freddi. Nonostante siano abbastanza rari vengono utilizzati come Pokémon iniziale dal Professor Rowan, che li affida ai giovani allenatori della regione di Sinnoh.</p>
                   <button type="button" class="btn"  (click)="indietro()">Torna alla home</button>
                 </div>
               </div>       
@@ -124,10 +128,12 @@
               <ng-template #thenBlock7>
                 <div class="container" style="width: 400px;">
                 <div class="card mb-5">
-                  <img class="card-img-top" src="img_avatar1.png" alt="Card image">
+                  <img class="card-img-top" src="../../assets/turtwig.jpeg" alt="Card image">
                   <div class="card-body">
-                    <h4 class="card-title">John Doe</h4>
-                    <p class="card-text">Some example text.</p>
+                    <h4 style="font-family: FREEBOSS;color: lightgreen;"   class="card-title">TURTWIG</h4>
+                    <p  style="font-family: FREEBOSS;color: lightgreen;"   class="card-text">POKEMON PERLA(quarta generazione)</p>
+                    <p  style="font-family: FREEBOSS;color: lightgreen;"   class="card-text">descrizione: Turtwig è un Pokémon di tipo Erba introdotto in quarta generazione.Si evolve in Grotle a partire dal livello 18 e quindi in Torterra a partire dal livello 32.</p>
+                    <p  style="font-family: FREEBOSS;color: lightgreen;"   class="card-text">habitat: È difficile trovare Turtwig nelle zone selvagge. Di solito è dato dal Professor Rowan come Pokémon iniziale ai giovani Allenatori. Può essere trovato anche lungo i laghi mentre rafforza il suo guscio bevendo.</p>
                     <button type="button" class="btn"  (click)="indietro()">Torna alla home</button>
                   </div>
                 </div>         
