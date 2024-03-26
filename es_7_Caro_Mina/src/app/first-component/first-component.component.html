@@ -7,22 +7,84 @@
   <img style="margin-left: 370px;"  src="../../assets/pokemon-nero-removebg-preview.png" alt="">
   <p style="font-family: FREEBOSS; color: black;">Unima è una regione del mondo dei Pokémon. È l'ambientazione dei giochi di quinta generazione, Nero e Bianco e Nero 2 e Bianco 2. A differenza delle precedenti, questa è molto lontana dalle altre quattro regioni e i Pokémon che vi abitano sono diversi da quelli di Kanto, Johto, Hoenn e Sinnoh. Nel suo editoriale, Junichi Masuda ha suggerito che la geografia e la società di Unima sono ispirate all'area metropolitana e all'intero stato di New York, che possiede un mix di aree rurali e aree urbane, insieme a fabbriche e complessi industriali.</p>
   <br><br>
+<div class="container">
+    <div class="row">
+  <div *ngFor="let element of pokemon, index as i" class="col-md-4">
 
-  <div *ngFor="let element of pokemon, index as i">
+    <div class="card mb-4">
+        <img class="card-img-top" src="img_avatar1.png" alt="Card image">
+        <div class="card-body">
+          <h4 class="card-title">John Doe</h4>
+          <p class="card-text">Some example text.</p>
+          <a href="#" class="btn btn-primary">See Profile</a>
+        </div>
+      </div>
 
-    <div class="card w-75">
-  <div class="card-body">
-    <h5 class="card-title">{{element.nome}}</h5>
-    <p class="card-text">With supporting text below as a natural lead-in to additional content.</p>
-    <a href="#" class="btn btn-primary">Button</a>
-  </div>
-</div>
-   
-   </div>
+      <div class="container" style="width: 400px;">
+    
+        <div class="card mb-5">
+            <img class="card-img-top" src="img_avatar1.png" alt="Card image">
+            <div class="card-body">
+              <h4 class="card-title">John Doe</h4>
+              <p class="card-text">Some example text.</p>
+              <a href="#" class="btn btn-primary">See Profile</a>
+            </div>
+          </div>
 
- 
+          <div class="container" style="width: 400px;">
+          
+        
+            <div class="card mb-5" style="400px">
+                <img class="card-img-top" src="img_avatar1.png" alt="Card image">
+                <div class="card-body">
+                  <h4 class="card-title">John Doe</h4>
+                  <p class="card-text">Some example text.</p>
+                  <a href="#" class="btn btn-primary">See Profile</a>
+                </div>
+              </div>
 
-  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js"></script>
-  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+              <div class="container"style="400px">
+                <div class="card mb-5">
+                    <img class="card-img-top" src="img_avatar1.png" alt="Card image">
+                    <div class="card-body">
+                      <h4 class="card-title">John Doe</h4>
+                      <p class="card-text">Some example text.</p>
+                      <a href="#" class="btn btn-primary">See Profile</a>
+                    </div>
+                  </div>
 
+                  <div class="container" style="width: 400px;">
+                    
+                
+                    <div class="card mb-5">
+                        <img class="card-img-top" src="img_avatar1.png" alt="Card image">
+                        <div class="card-body">
+                          <h4 class="card-title">John Doe</h4>
+                          <p class="card-text">Some example text.</p>
+                          <a href="#" class="btn btn-primary">See Profile</a>
+                        </div>
+                      </div>
+
+                      <div class="container" style="width: 400px;">
+                        
+                        <div class="card mb-5">
+                            <img class="card-img-top" src="img_avatar1.png" alt="Card image">
+                            <div class="card-body">
+                              <h4 class="card-title">John Doe</h4>
+                              <p class="card-text">Some example text.</p>
+                              <a href="#" class="btn btn-primary">See Profile</a>
+                            </div>
+                          </div>
+                          <div class="container" style="width: 400px;">
+                        
+                            <div class="card mb-5">
+                                <img class="card-img-top" src="img_avatar1.png" alt="Card image">
+                                <div class="card-body">
+                                  <h4 class="card-title">John Doe</h4>
+                                  <p class="card-text">Some example text.</p>
+                                  <a href="#" class="btn btn-primary">See Profile</a>
+                                </div>
+                              </div>
+                                            
+
+      
